@@ -7,20 +7,48 @@ namespace Zork
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Zork!");
+
             string inputstring = Console.ReadLine();
-            inputstring = inputstring.ToUpper();
-            if (inputstring == "QUIT")
+            Commands command = ToCommand(inputstring.Trim().ToUpper());
+            Console.WriteLine(command);
+        }
+
+        private static Commands ToCommand(string commandString)
+        {
+            Commands command;
+
+            if (commandString =="QUIT")
             {
-                Console.WriteLine("Thank you for playing.");
+                command = Commands.QUIT;
             }
-            else if (inputstring == "LOOK")
+            else if (commandString == "LOOK")
             {
-                Console.WriteLine("This is an open field west of the white house, with a boarded front door. \nA rubber mat saying 'Welcome to Zork!' lies by the door.");
+                command = Commands.LOOK;
+            }
+            else if (commandString == "NORTH")
+            {
+                command = Commands.NORTH;
+            }
+            else if (commandString == "SOUTH")
+            {
+                command = Commands.SOUTH;
+            }
+            else if (commandString == "EAST")
+            {
+                command = Commands.EAST;
+            }
+            else if (commandString == "WEST")
+            {
+                command = Commands.WEST;
             }
             else
             {
-                Console.WriteLine("Unrecognized command.");
+                command = Commands.UNKNOWN;
+            }
+
+            return command;
             }
         }
-    }
+         
 }
+        
