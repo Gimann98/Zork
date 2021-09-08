@@ -16,7 +16,27 @@ namespace Zork
                 command = ToCommand(Console.ReadLine());
 
                 string outputString;
-                switch (command)...
+                switch (command)
+                {
+                    case Commands.QUIT:
+                        outputString = "Thank you for playing!";
+                        break;
+
+                    case Commands.LOOK:
+                        outputString = "This is an open field west, with a boarded front door. \nA rubber mat saying 'Welcome to Zork!' lies by the door.";
+                        break;
+
+                    case Commands.NORTH:
+                    case Commands.SOUTH:
+                    case Commands.EAST:
+                    case Commands.WEST:
+                        outputString = $"You Moved {command}.";
+                        break;
+
+                    default:
+                        outputString = "Unknown command";
+                        break;
+                }
 
                 Console.WriteLine(outputString);
             }
