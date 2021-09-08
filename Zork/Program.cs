@@ -76,7 +76,12 @@ namespace Zork
         }
 
         private static int LocationColumn = 1;
-        private static string[] Rooms = { "Forest", "West of House", "Behind House", "Clearing", "Canyon View" };
+        private static int LocationRow = 1;
+        private static readonly string[,] Rooms = {
+            {"Dense Woods, North of House, Clearing"},
+            {"Forest, West of House, Behind House" },
+            {"Rocky Trail, South of House, Canyon View" },
+        };
         private static Commands ToCommand(string commandString) => Enum.TryParse(commandString, true, out Commands result) ? result : Commands.UNKNOWN;
     }
 }
