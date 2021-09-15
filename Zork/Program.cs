@@ -7,17 +7,6 @@ namespace Zork
     class Program
 
     {
-        public static class Assert
-        {
-            [Conditional("DEBUG")]
-            public static void IsTrue(bool expression, string message = null)
-            {
-                if (expression == false)
-                {
-                    throw new Exception(message);
-                }
-            }
-        }
         private static string CurrentRoom
         {
             get
@@ -95,12 +84,14 @@ namespace Zork
         }
 
         private static bool IsDirection(Commands command) => Directions.Contains(command);
-        private static (int Row, int Column) Location = (1, 1);
+
+        private static (int Row, int Column) Location = (1,1);
+
         private static readonly string[,] Rooms = 
             {
-                {"Dense Woods, North of House, Clearing"},
-                {"Forest, West of House, Behind House" },
-                {"Rocky Trail, South of House, Canyon View" },
+                {"Dense Woods", "North of House", "Clearing"},
+                {"Forest", "West of House", "Behind House"},
+                {"Rocky Trail", "South of House", "Canyon View" },
             };
 
         private static readonly List<Commands> Directions = new List<Commands>
@@ -110,7 +101,7 @@ namespace Zork
             Commands.EAST,
             Commands.WEST,
         };
-        private static Commands ToCommand(string commandString) => Enum.TryParse(commandString, true, out Commands result) ? result : Commands.UNKNOWN;
+        private static Commands ToCommand(string commandString) => Enum.TryParse(commandString, true, out Commands result) ?result : Commands.UNKNOWN;
     }
 }
         
