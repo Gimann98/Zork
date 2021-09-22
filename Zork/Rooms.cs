@@ -4,12 +4,14 @@ using System.Text;
 
 namespace Zork
 {
-    class Rooms
+    class Room
     {
+        public override string ToString() => Name;
+
         public string Name { get; set; }
 
         public string Description { get; set;}
-        public Rooms(string name, string description = null)
+        public Room(string name, string description = null)
         {
             Name = name;
             Description = description;
