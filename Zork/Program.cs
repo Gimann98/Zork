@@ -18,8 +18,8 @@ namespace Zork
         }
         static void Main(string[] args)
         {
-            const string roomDescriptionsFileName = "Rooms.json";
-            IntitializeRoomDescription(roomDescriptionsFileName);
+            const string roomsFileName = "Rooms.json";
+            IntitializeRoomDescription(roomsFileName);
 
             Console.WriteLine("Welcome to Zork!");
 
@@ -27,7 +27,7 @@ namespace Zork
             Commands command = Commands.UNKNOWN;
             while (command != Commands.QUIT)
             {
-                Console.Write(CurrentRoom.Name);
+                Console.WriteLine(CurrentRoom.Name);
 
                 if (previousRoom != CurrentRoom)
                 {
@@ -100,36 +100,10 @@ namespace Zork
 
         private static (int Row, int Column) Location = (1,1);
 
-        private static void IntitializeRoomDescription(string roomDescriptionsFileName)
-        {
-            var roomMap = new Dictionary<string, Room>();
-            foreach (Room room in Rooms)
-            {
-                roomMap[room.Name] = room;
-            }
-
-            string roomsJsonString = File.ReadAllText(roomDescriptionsFileName);
-            Room[] rooms = JsonConvert.DeserializeObject<Room[]>(roomsJsonString);
-            foreach (Room room in rooms)
-            {
-                roomMap[room.Name].Description = room.Description;
-            }
-            
-            //string[] lines = File.ReadAllLines(roomDescriptionsFileName);
-            //foreach (string line in lines)
-            //{
-            //const string delimiter = "##";
-            //const int expectedFieldCount = 2;
-            //
-            //            string[] fields = line.Split(delimiter);
-            //Assert.IsTrue(fields.Length == expectedFieldCount, "Invalid record.");
-            //
-            //(string name, string description) = (fields[(int)Fields.Name], fields[(int)Fields.Description]);
-            //roomMap[name].Description = description;
-            //}
-        }
-
-        private static readonly Room[,] Rooms = 
+        private static void IntitializeRoomDescription(string roomsFileName) =>
+                Rooms = JsonConvert.DeserializeObject<Room[,]>(File.ReadAllText(roomsFileName));
+        
+        private static Room[,] Rooms = 
             {
                 { new Room("Dense Woods"), new Room("North of House"), new Room("Clearing") },
                 { new Room("Forest"), new Room ("West of House"), new Room ("Behind House") },
