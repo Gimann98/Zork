@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Zork.Console", "Zork\Zork.Console.csproj", "{3695B517-3134-497D-A5DF-C931D5265A57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zork.Common", "Zork.Common\Zork.Common.csproj", "{EF3CE304-6E4A-4D24-ABED-6D061FCDCB01}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zork.Builder.WinForms", "Zork.Builder.WinForms\Zork.Builder.WinForms.csproj", "{DF0DDEE3-4D2E-4CC5-9C6A-9000CE091783}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zork.Builder.WinForms", "Zork.Builder.WinForms\Zork.Builder.WinForms.csproj", "{148D30E5-49C4-4A5F-AE89-ECC1D7342E61}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zork.Common", "Zork.Common\Zork.Common.csproj", "{0E7BBBAC-5D14-429B-B8FF-DD1791DD5E70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,14 @@ Global
 		{3695B517-3134-497D-A5DF-C931D5265A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3695B517-3134-497D-A5DF-C931D5265A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3695B517-3134-497D-A5DF-C931D5265A57}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EF3CE304-6E4A-4D24-ABED-6D061FCDCB01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF3CE304-6E4A-4D24-ABED-6D061FCDCB01}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF3CE304-6E4A-4D24-ABED-6D061FCDCB01}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF3CE304-6E4A-4D24-ABED-6D061FCDCB01}.Release|Any CPU.Build.0 = Release|Any CPU
-		{148D30E5-49C4-4A5F-AE89-ECC1D7342E61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{148D30E5-49C4-4A5F-AE89-ECC1D7342E61}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{148D30E5-49C4-4A5F-AE89-ECC1D7342E61}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{148D30E5-49C4-4A5F-AE89-ECC1D7342E61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF0DDEE3-4D2E-4CC5-9C6A-9000CE091783}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF0DDEE3-4D2E-4CC5-9C6A-9000CE091783}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF0DDEE3-4D2E-4CC5-9C6A-9000CE091783}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF0DDEE3-4D2E-4CC5-9C6A-9000CE091783}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E7BBBAC-5D14-429B-B8FF-DD1791DD5E70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E7BBBAC-5D14-429B-B8FF-DD1791DD5E70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E7BBBAC-5D14-429B-B8FF-DD1791DD5E70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E7BBBAC-5D14-429B-B8FF-DD1791DD5E70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
