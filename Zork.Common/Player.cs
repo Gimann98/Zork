@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System;
 using System.Collections.ObjectModel;
 using Newtonsoft.Json;
 
@@ -6,6 +7,8 @@ namespace Zork
 {
     public class Player
     {
+        public EventHandler<Room> LocationChanged;
+
         public World World { get; }
 
         [JsonIgnore]

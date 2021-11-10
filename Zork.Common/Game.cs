@@ -14,6 +14,8 @@ namespace Zork
         [JsonIgnore]
         private bool IsRunning { get; set; }
 
+        public IInputService Input { get; set; }
+
         public IOutputService Output {get; set;}
 
         public Game(World world, Player player)
@@ -22,7 +24,7 @@ namespace Zork
             Player = player;
         }
 
-        public void Run()
+        public void Run(IInputService input, IOutputService output)
         {
             IsRunning = true;
             Room previousRoom = null;
